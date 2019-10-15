@@ -1,3 +1,5 @@
+# This theme is modify by Default theme Light
+
 # Light
 
 Default theme for [Hexo].
