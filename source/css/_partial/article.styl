@@ -29,8 +29,9 @@ article
           vertical-align super
 
   .post-content
+    overflow auto
     padding 20px 20px 15px 20px
-    margin-bottom 50px
+    margin-bottom 20px
     position relative
     @media screen and (max-width: 600px)
       padding-left 20px
@@ -104,7 +105,7 @@ article
 
     time
       color color-meta
-      font 0.9em font-title
+      font 1em font-title
       margin-bottom 5px
       display block
       line-height 1
@@ -128,13 +129,17 @@ article
       border-spacing 0
       empty-cells show
       border 1px solid lighten(color-border, 2)
-
+		
+	  
       th
         white-space nowrap
         color color-font
         font-weight 600
         background #eee
 
+      td
+        vertical-align baseline
+		
       td,
       th
         border 1px solid lighten(color-border, 2)
@@ -299,3 +304,5 @@ article
       margin-top 15px
       iframe
         margin-top 0
+
+     
