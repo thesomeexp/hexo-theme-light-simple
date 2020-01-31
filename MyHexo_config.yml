@@ -1,7 +1,8 @@
-# !!!!!!!ignore it!!!!!!!
+# ignore it!!!!!!!!!!!!
 # Hexo Configuration
 ## Docs: https://hexo.io/docs/configuration.html
 ## Source: https://github.com/hexojs/hexo/
+
 # Site
 title: SomeExp
 subtitle:
@@ -74,7 +75,7 @@ pagination_dir: page
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
 theme: hexo-theme-light
-
+markdown: 'default'
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
