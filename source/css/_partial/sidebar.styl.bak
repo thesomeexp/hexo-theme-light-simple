@@ -1,6 +1,6 @@
 #sidebar
   font-size 16px
-  width 270px
+  width page-width
   margin 0 auto
   @media screen and (max-width: 900px)
     width 100%
@@ -8,7 +8,7 @@
   .widget
     background #fff
     box-shadow 1px 2px 3px #ddd
-    margin-bottom 20px
+    margin-bottom 30px
     word-wrap break-word
     .title
       padding 15px 20px
@@ -72,14 +72,3 @@
     a
       margin-right 10px
       display inline-block
-
-  .footer
-      background #fff
-      font-family font-title
-      font-style italic
-      font-size 0.8em
-      padding 10px 15px
-      border 1px solid color-border
-      width 100%
-      box-sizing border-box
-      color color-meta

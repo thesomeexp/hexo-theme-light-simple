@@ -1,3 +1,6 @@
+# 修改了hexo默认的light主题
+精简了一部分不需要的内容. 
+例子: http://someexp.com
 # This theme is modify by Default theme Light
 
 # Light

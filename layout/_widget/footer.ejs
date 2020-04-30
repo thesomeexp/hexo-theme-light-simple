@@ -1,0 +1,10 @@
+<div class="widget footer">
+  <% if (config.author){ %>
+  <span>&copy;2017-<%= new Date().getFullYear() %> <%= config.author %></span>
+  <% } else { %>
+  <span>&copy; 2017-<%= new Date().getFullYear() %> <%= config.title %></span>
+  <% } %>
+  </br>
+  <span>Powered by <a href="http://hexo.io" >Hexo</a></span>
+  </br>
+</div>

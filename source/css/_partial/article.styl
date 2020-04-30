@@ -168,7 +168,7 @@ article
             content '—'
             color #ccc
             padding 0 0.5em
-
+              
     code, pre
       font-family font-mono
 
@@ -284,21 +284,18 @@ article
 
     .categories, .tags
       position relative
-      padding-left 25px
+      padding-left 0px
       margin 5px 0
-      &:before
-        position absolute
-        font 1.1em font-icon
 
     .categories
       &:before
-        content '\f07b'
+        content '类别:'
         top 2px
         left 1px
 
     .tags
       &:before
-        content '\f02b'
+        content '标签:'
         top 3px
         left 2px
 
@@ -307,4 +304,12 @@ article
       iframe
         margin-top 0
 
+    .copyright
+      font-size 1em
+      color black
+      a
+        color color-link
+        text-decoration none
+        &:hover
+          text-decoration underline
      
