@@ -3,10 +3,10 @@
     <header>
       <%- partial('post/title') %>
       <% if (item.layout != 'page'){ %>
-        <time itemprop="datePublished" datetime="<%= item.date.toDate().toISOString() %>">发布于<%= item.date.format(config.date_format) %></time>
+        <time itemprop="datePublished" datetime="<%= item.date.toDate().toISOString() %>"><%= item.date.format(config.date_format) %></time>
         
         <% if (!index){ %>
-            <time itemprop="dateModified" updated="<%= item.updated.toDate().toISOString() %>">更新于<%= item.updated.format(config.date_format) %></time>
+            <time itemprop="dateModified" updated="<%= item.updated.toDate().toISOString() %>">To <%= item.updated.format(config.date_format) %></time>
         <% } %>
       <% } %>
     </header>
