@@ -7,7 +7,7 @@
 title: SomeExp
 subtitle:
 description:
-keywords:
+keywords: someexp
 author: someexp
 language: zh-CN
 timezone: Asia/Shanghai
@@ -23,11 +23,11 @@ permalink_defaults:
 source_dir: source
 public_dir: public
 tag_dir: tags
-archive_dir: archives
+# archive_dir: archives
 category_dir: categories
 code_dir: downloads/code
 i18n_dir: :lang
-skip_render: love/**
+skip_render: online_demo/**
 
 # Writing
 new_post_name: :title.md # File name of new posts
@@ -44,7 +44,16 @@ highlight:
   line_number: true
   auto_detect: false
   tab_replace: 
-  
+
+
+archive_generator: 
+  enabled: true
+  per_page: 0
+
+tag_generator:
+  per_page: 0
+  order_by: -date
+
 # Home page setting
 # path: Root path for your blogs index page. (default = '')
 # per_page: Posts displayed per page. (0 = disable pagination)
@@ -82,3 +91,6 @@ deploy:
   type: git
   repo: git@github.com:thesomeexp/thesomeexp.github.io.git
   branch: master
+
+favicon: 
+  medium: /favicon.ico
