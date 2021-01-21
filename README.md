@@ -1,26 +1,22 @@
-# 修改了hexo默认的light主题
-精简了一部分不需要的内容. 
-例子: http://someexp.com
-# This theme is modify by Default theme Light
+# hexo-theme-light-simple
 
-# Light
-
-Default theme for [Hexo].
+This theme is modify by Default theme Light. [Demo here.](https://someexp.com)
 
 ## Install
 
-Execute the following command and modify `theme` in `_config.yml` to `light`.
+Execute the following command and modify `theme` in `_config.yml` to `hexo-theme-light-simple`.
 
 ```
-git clone https://github.com/hexojs/hexo-theme-light.git themes/light
+cd themes
+git clone https://github.com/thesomeexp/hexo-theme-light-simple.git
 ```
 
 ## Update
 
-Execute the following command to update Light.
+Execute the following command to update hexo-theme-light-simple.
 
 ```
-cd themes/light
+cd themes/hexo-theme-light-simple
 git pull
 ```
 
@@ -30,90 +26,138 @@ Default config:
 
 ``` yaml
 menu:
-  Home: /
-  Archives: /archives
+  Home: 
+  Archives: archives
+  About: about
 
 widgets:
-- search
-- category
 - tag
-- twitter
+- footer
 
-excerpt_link: Read More
-
-twitter:
-  username:
-  show_replies: false
-  tweet_count: 5
-
-addthis:
-  enable: true
-  pubid:
-  facebook: true
-  twitter: true
-  google: true
-  pinterest: true
-
-fancybox: true
-
-google_analytics:
-rss:
 ```
 
-- **menu** - Main navigation menu
+- **menu** - Main navigation menu (Remember to create the same file in your ```source/about/index.md```)
 - **widget** - Widgets displaying in sidebar
-- **excerpt_link** - "Read More" link text at the bottom of excerpted articles
-- **twitter** - Twitter widget config
-  - **username** - Twitter username
-  - **show_replies** - Enable displaying replies
-  - **tweet_count** - Tweets display in widget
-- **addthis** - Share buttons at the buttom of articles (Powered by [AddThis])
-  - **enable** - Enable share buttons
-  - **pubid** - Profile ID of [AddThis]
-  - **facebook** - Enable Facebook button
-  - **twitter** - Enable Twitter button
-  - **google** - Enable Google+ button
-  - **pinterest** - Enable Pinterest button
-- **fancybox** - Enable [Fancybox]
-- **google_analytics** - Google Analytics ID
-- **rss** - RSS subscription link (change if using Feedburner)
 
-## Features
+## Use
 
-### Gallery Post
+Default scaffolds/post config:
 
-![](http://i.minus.com/ibp6Hbytwgof9y.jpg)
+~~~
+---
+title: {{ title }}
+date: {{ date }}
+updated: {{ date }}
+tags: 
+urlname: 
+original: 
+---
+~~~
+
+- **title** - Title
+- **date** - Created date
+- **updated** - Updated date
+- **tags** - Some tags
+- **link** - Point to some page on your websit (when you use this, **urlname** doesn't work)
+- **urlname** - Posted article url link 
+- **original** - Show ```themes/hexo-theme-light-simple/layout/_partial/post/copyright.ejs``` at the end? true/false
+
+create article
+
+~~~
+hexo new 'title'
+~~~
+
+# Q&A
+
+## How to use 'Read More' ?
+
+Add 
+
+~~~
+<!--more-->
+~~~
+
+in your article. 
+
+# hexo-theme-light-简单版
+
+这个主题修改自Hexo默认的Light主题. [示例在这.](https://someexp.com)
+
+## 安装
+
+执行下面的命令和修改hexo配置文件 `_config.yml` 的 `theme` 属性的值为 `hexo-theme-light-simple` .
+进入themes文件夹, `hexo-theme-light-simple` 下载主题
+```
+cd themes
+git clone https://github.com/thesomeexp/hexo-theme-light-simple.git
+```
+
+## 更新
+
+执行下面的命令来升级hexo-theme-light-简单版
 
 ```
----
-layout: photo
-title: Gallery Post
-photos:
-- http://i.minus.com/ibobbTlfxZgITW.jpg
-- http://i.minus.com/iedpg90Y0exFS.jpg
----
+cd themes/hexo-theme-light-simple
+git pull
 ```
 
-### Link Post
+## 配置
 
-![](http://i.minus.com/i7hBbGqh14EWo.png)
+默认配置:
+
+``` yaml
+menu:
+  Home: 
+  Archives: archives
+  About: about
+
+widgets:
+- tag
+- footer
 
 ```
+
+- **menu** - 主要的导航栏菜单 (如果创建了, 那么记得去相关的目录创建对应的index.md文件, 比如: ```source/about/index.md```)
+- **widget** - 一些是否显示的侧边栏小组件
+
+## 使用
+
+默认的草稿模板 scaffolds/post.md 配置:
+
+~~~
 ---
-layout: link
-title: Link Post
-link: http://www.google.com/
+title: {{ title }}
+date: {{ date }}
+updated: {{ date }}
+tags: 
+urlname: 
+original: 
 ---
-```
+~~~
 
-### Tweet Widget
+- **title** - 文章标题
+- **date** - 文章创建日期
+- **updated** - 更新时间
+- **tags** - 一些文章相关标签
+- **link** - 该链接能指向source的所有.md文章 (当你使用这个配置时, **urlname** 配置不会工作)
+- **urlname** - 发布文章的永久链接, 也就是文章的链接
+- **original** - 是否在文章末尾显示 ```themes/hexo-theme-light-simple/layout/_partial/post/copyright.ejs``` ? 值为: **true** 或 **false**
 
-![](http://i.minus.com/iMC8EyF9y0Y3y.PNG)
+创建文章
 
-### Fancybox
+~~~
+hexo new 'title'
+~~~
 
-![](http://i.minus.com/iHv7h7rZNqHvo.PNG)
+# Q&A
 
-[Hexo]: http://zespia.tw/hexo/
-[AddThis]: https://www.addthis.com
-[Fancybox]: http://fancyapps.com/fancybox/
+## 如何使用 'Read More' (查看更多) ?
+
+在文章中添加: 
+
+~~~
+<!--more-->
+~~~
+
+来区分. 

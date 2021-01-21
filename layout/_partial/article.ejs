@@ -1,36 +1,35 @@
 <article class="<%= item.layout %>">
-  <div class="post-content">
-    <header>
-      <%- partial('post/title') %>
-      <% if (item.layout != 'page'){ %>
-        <time itemprop="datePublished" datetime="<%= item.date.toDate().toISOString() %>"><%= item.date.format(config.date_format) %></time>
-        
-        <% if (!index){ %>
-            <time itemprop="dateModified" updated="<%= item.updated.toDate().toISOString() %>">To <%= item.updated.format(config.date_format) %></time>
+    <div class="post-content">
+        <header>
+            <%- partial('post/title') %>
+            <% if (item.layout != 'page'){ %>
+                <time itemprop="datePublished"
+                      datetime="<%= item.date.toDate().toISOString() %>"><%= item.date.format(config.date_format) %></time>
+                To
+                <time itemprop="dateModified"
+                      updated="<%= item.updated.toDate().toISOString() %>"><%= item.updated.format(config.date_format) %></time>
+            <% } %>
+        </header>
+        <div class="entry">
+            <% if (item.excerpt && index){ %>
+                <%- item.excerpt %>
+            <% } else { %>
+                <%- item.content %>
+            <% } %>
+        </div>
+        <% if (index){ %>
+
+        <% } else { %>
+            <% if (item.original){ %>
+                <footer>
+                    <%- partial('post/copyright') %>
+                </footer>
+            <% } %>
+
+            <footer>
+                <%- partial('post/tag') %>
+            </footer>
         <% } %>
-      <% } %>
-    </header>
-    <div class="entry">
-      <% if (item.excerpt && index){ %>
-        <%- item.excerpt %>
-      <% } else { %>
-        <%- item.content %>
-      <% } %>
     </div>
-      <% if (index){ %>
-        
-      <% } else { %>
-      
-    <% if (item.original){ %>
-      <footer>
-        <%- partial('post/copyright') %>
-      </footer>
-    <% } %>
-      
-    <footer>
-        <%- partial('post/tag') %>
-    </footer>
-      <% } %>
-  </div>
 </article>
 

@@ -7,12 +7,8 @@
   var title = [];
   if (page.current > 1) title.push(__('page', page.current));
   if (page.title) title.push(page.title);
-  if (page.category) title.push(page.category);
   if (page.tag) title.push(page.tag);
-  if (page.archive){
-    if (page.year) title.push(__('archive_b', page.year + (page.month ? '/' + page.month : '')));
-    else title.push(__('archive_a'));
-  }
+  if (page.archive) title.push(__('archive_a'));
   title.push(config.title);
   %>
   <title><%= title.join(' | ') %></title>
@@ -32,6 +28,5 @@
   <% if (page.title){ %><meta property="og:title" content="<%= page.title %>"/><% } %>
   <meta property="og:site_name" content="<%= config.title %>"/>
 
-  <link rel="alternate" href="<% if (theme.rss){ %><%- theme.rss %><% } else { %><%- config.root %>atom.xml<% } %>" title="<%= config.title %>" type="application/atom+xml">
   <link rel="stylesheet" href="<%- config.root %>css/style.css" media="screen" type="text/css">
 </head>
