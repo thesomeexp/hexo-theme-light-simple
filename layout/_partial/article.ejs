@@ -2,7 +2,10 @@
     <div class="post-content">
         <header>
             <%- partial('post/title') %>
-            <% if (item.layout != 'page'){ %>
+            <% if (index){ %>
+                <time itemprop="datePublished"
+                      datetime="<%= item.date.toDate().toISOString() %>"><%= item.date.format(config.date_format) %></time>
+            <% } else if(  item.layout != 'page') { %>
                 <time itemprop="datePublished"
                       datetime="<%= item.date.toDate().toISOString() %>"><%= item.date.format(config.date_format) %></time>
                 <span style="color: rgb(153, 153, 153);">To</span>

@@ -22,8 +22,6 @@ if (page.archive){
           <header>
             <div class="icon"></div>
             <time datetime="<%= item.date.toDate().toISOString() %>"><%= item.date.format(config.date_format) %></time>
-              <time itemprop="dateModified" updated="<%= item.updated.toDate().toISOString() %>">
-                  To <%= item.updated.format(config.date_format) %></time>
             <% if (item.link){ %>
               <% if (item.title){ %>
                 <h1 class="title link"><a href="<%- config.root %><%- item.link %>"><%= item.title %></a></h1>
