@@ -61,6 +61,7 @@ original:
 - **link** - Point to some page on your websit (when you use this, **urlname** doesn't work)
 - **urlname** - Posted article url link 
 - **original** - Show ```themes/hexo-theme-light-simple/layout/_partial/post/copyright.ejs``` at the end? true/false
+- **noindex** - If add ```<meta name="robots" content="noindex">``` in head tag?
 
 create article
 
@@ -120,6 +121,7 @@ widgets:
 
 - **menu** - 主要的导航栏菜单 (如果创建了, 那么记得去相关的目录创建对应的index.md文件, 比如: ```source/about/index.md```)
 - **widget** - 一些是否显示的侧边栏小组件
+- **noindex** - 在 head 标签是否添加```<meta name="robots" content="noindex">```?
 
 ## 使用
 
