@@ -28,6 +28,6 @@
 
   <% if (page.title){ %><meta property="og:title" content="<%= page.title %>"/><% } %>
   <meta property="og:site_name" content="<%= config.title %>"/>
-
+  <% if (config.head_icon){ %><link rel="icon" href="<%= config.head_icon %>"><% } %>
   <link rel="stylesheet" href="<%- config.root %>css/style.css" media="screen" type="text/css">
 </head>
