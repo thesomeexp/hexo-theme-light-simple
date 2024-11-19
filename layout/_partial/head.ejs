@@ -1,9 +1,7 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-  <meta charset="utf-8">
-  
-  <%
+  <meta charset="utf-8"><% 
   var title = [];
   if (page.current > 1) title.push(__('page', page.current));
   if (page.title) title.push(page.title);
@@ -13,20 +11,15 @@
   %>
   <title><%= title.join(' | ') %></title>
   <% if (config.author){ %><meta name="author" content="<%= config.author %>"><% } %>
-  <% if (page.description){ %>
-  <meta name="description" content="<%= page.description %>">
-  <% } else if (config.description){ %>
-  <meta name="description" content="<%= config.description %>">
-  <% } else if (page.excerpt){ %>
-  <meta name="description" content="<%= strip_html(page.excerpt).replace(/^\s*/, '').replace(/\s*$/, '') %>">
-  <% } else if (page.content){ %>
-  <meta name="description" content="<%= strip_html(page.content).replace(/^\s*/, '').replace(/\s*$/, '').substring(0, 150) %>">
-  <% } %>
-  <% if (page.keywords){ %><meta name="keywords" content="<%= page.keywords %>"><% } %>
-  <% if (page.noindex){ %><meta name="robots" content="noindex"><% } %>
+  <% if (page.description){ %><meta name="description" content="<%= page.description %>">
+  <meta name="og:description" content="<%= page.description %>">  <% } else if (config.description){ %><meta name="description" content="<%= config.description %>">
+  <meta name="og:description" content="<%= config.description %>">  <% } else if (page.excerpt){ %><meta name="description" content="<%= strip_html(page.excerpt).replace(/^\s*/, '').replace(/\s*$/, '') %>">  <% } else if (page.content){ %><meta name="description" content="<%= strip_html(page.content).replace(/^\s*/, '').replace(/\s*$/, '').substring(0, 150) %>">  <% } %><% if (page.keywords){ %>  
+  <meta name="keywords" content="<%= page.keywords %>"><% } %><% if (page.noindex){ %>
+  <meta name="robots" content="noindex"><% } %>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-
-  <% if (page.title){ %><meta property="og:title" content="<%= page.title %>"/><% } %>
+  <% if (config.head_icon){ %><meta property="og:image" content="<%= config.head_icon %>"/><% } %>
+  <% if (page.title){ %><meta property="og:title" content="<%= page.title %>"/>
+  <% } else { %><meta property="og:title" content="<%= config.title %>"/>  <% } %>
   <meta property="og:site_name" content="<%= config.title %>"/>
   <% if (config.head_icon){ %><link rel="icon" href="<%= config.head_icon %>"><% } %>
   <link rel="stylesheet" href="<%- config.root %>css/style.css" media="screen" type="text/css">
