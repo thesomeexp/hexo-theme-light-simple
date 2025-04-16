@@ -1,6 +1,6 @@
 # hexo-theme-light-simple
 
-This theme is modify by Default theme Light. [Demo here.](https://someexp.com)
+This theme is modify by Default theme Light. [Demo here.](https://thesomeexp.github.io)
 
 ## Install
 
@@ -83,7 +83,7 @@ in your article.
 
 # hexo-theme-light-简单版
 
-这个主题修改自Hexo默认的Light主题. [示例在这.](https://someexp.com)
+这个主题修改自Hexo默认的Light主题. [示例在这.](https://thesomeexp.github.io)
 
 ## 安装
 
