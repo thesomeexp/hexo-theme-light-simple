@@ -125,6 +125,11 @@ article
         &:hover
           color color-link
           text-decoration none
+    @media print {
+      .print-button {
+        display: none; /* 打印时隐藏按钮 */
+      }
+    }
 
   .entry
     text-align justify
