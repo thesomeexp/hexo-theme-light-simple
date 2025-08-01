@@ -1,5 +1,13 @@
+<% if (page.layout === 'resume') { %>
 <%- partial('_partial/head') %>
-
+<body>
+  <div id="content" class="inner">
+    <div id="main-col" class="alignleft"><div id="wrapper"><%- body %></div></div>
+  </div>
+</body>
+</html>
+<% } else {  %>
+<%- partial('_partial/head') %>
 <body>
   <header id="header" class="inner"><%- partial('_partial/header') %></header>
   <div id="content" class="inner">
@@ -9,3 +17,4 @@
   </div>
 </body>
 </html>
+<% } %>
