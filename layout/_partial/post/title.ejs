@@ -8,7 +8,7 @@
   <% if (index){ %>
     <h1 class="title"><a href="<%- config.root %><%- item.path %>"><%= item.title %></a></h1>
   <% } else if (page.layout === 'resume') { %>
-    <h1 class="title"><%= item.title %> <button class="print-button" onclick="window.print()">🖨️ 打印</button></h1>
+    <h1 class="title"><%= item.title %> <button class="print-button" onclick="window.print()">🖨️ 打印 PDF</button></h1>
   <% } else { %>
     <h1 class="title"><%= item.title %></h1>
   <% } %>
