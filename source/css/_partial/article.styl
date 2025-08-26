@@ -35,6 +35,19 @@ article
     position relative
     @media screen and (max-width: 600px)
       padding-left 20px
+
+    .resume-photo
+      float: right;
+      width: 120px;
+      height: 160px;
+      margin-left: 20px;
+      margin-bottom: 10px;
+      object-fit: cover;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      @media screen and (max-width: 600px)
+        display: none;
+    
       
   .archive-post-content
     overflow auto
@@ -132,7 +145,7 @@ article
     }
 
   .entry
-    text-align justify
+    text-align left
     line-height 1.6
     p, blockquote, ul, ol, dl, table, iframe, h3, h4, h5, h6, .video-container
       margin-top 15px
