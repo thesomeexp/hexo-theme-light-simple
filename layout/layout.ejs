@@ -12,6 +12,8 @@
     -webkit-box-shadow: none !important;
   }
 </style>
+<% } else if (page.path === 'index.html') { %>
+<%- body %>
 <% } else {  %>
 <%- partial('_partial/head') %>
 <body>

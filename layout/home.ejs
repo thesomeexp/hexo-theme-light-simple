@@ -1,0 +1,12 @@
+<% 
+  var posts = page.posts || site.posts;
+  if (posts) {
+    posts.sort('-date').each(function(item){ 
+%>
+  <%- partial('_partial/article', {item: item, index: true}) %>
+<% 
+    }); 
+  }
+%>
+
+<%- partial('_partial/pagination') %>
